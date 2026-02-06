@@ -37,7 +37,7 @@ if otvet == 'да':
                 print(itog)
             else:
                 print('Этой буквы нет в этом слове.')
-                ccount = 0
+            ccount = 0
             bukva = input()
         if itog == word:
             print('Здорово! Вы отгадали слово.')
