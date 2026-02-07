@@ -11,9 +11,9 @@ otvet = input()
 if otvet == 'да':
     while otvet == 'да' and countwords <= 20:
         countwords += 1
-        print('Введите любую цифру от 15 до 50 включительно.')
+        print('Введите любую цифру от 15 до 33 включительно.')
         chislo = int(input())
-        if chislo < 15 or chislo > 50:
+        if chislo < 15 or chislo > 33:
             print('Ошибка! Введите число ещё раз, убедившись, что оно удовлетворяет условию.')
             chislo = int(input())
         word = words.pop()
@@ -35,6 +35,8 @@ if otvet == 'да':
                     itog += i
                 else:
                     itog += '*'
+            if itog == word:
+                break
             if ccount != 0:
                 print(f'{itog}. У Вас осталось {chislo - count} опыток(-ки).')
             else:
@@ -42,7 +44,7 @@ if otvet == 'да':
             ccount = 0
             bukva = input()
         if itog == word:
-            print('Здорово! Вы отгадали слово.')
+            print(f'Здорово! Вы отгадали слово.({word})')
         else:
             print(f'К сожалению, у Вас не получилось отгадать слово. Это было слово "{word}".')
         itog = ''
